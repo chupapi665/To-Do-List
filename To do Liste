@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meine To-Do-Liste</title>
+  <style>
+    h1, button {
+      text-align: center;
+      background-color: #99e699;
+    }
+  </style>
+</head>
+<body>
+  <h1>To-Do-Liste</h1>
+  <ul id="to-do-list">
+    <li><input type="checkbox"> <input type="text" placeholder="Neue Aufgabe"> </li>
+  </ul>
+  <button onclick="addTask()">Aufgabe hinzufügen</button>
+  <script>
+  
+function addTask() {
+  // Erstellen Sie ein neues Eingabefeld für eine neue Aufgabe
+  const newTaskInput = document.createElement('input');
+  newTaskInput.type = "text";
+  newTaskInput.placeholder = "Neue Aufgabe";
+
+  // Erstellen Sie ein neues Listenelement und fügen Sie das Abhakkästchen und das neue Eingabefeld hinzu
+  const newTask = document.createElement('li');
+  newTask.innerHTML = `<input type="checkbox"> `;
+  newTask.appendChild(newTaskInput);
+
+  // Fügen Sie das neue Listenelement der Liste hinzu
+  const toDoList = document.querySelector('#to-do-list');
+  toDoList.appendChild(newTask);
+   taskInput.value = '';
+ 
+}
+ </script>
+</body>
+</html>
